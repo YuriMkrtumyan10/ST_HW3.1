@@ -60,9 +60,6 @@ public class TestClass {
 
     //@Test
     public void testLogin2() {
-        String yourValidPassword = "";
-        String yourValidUserName = "";
-
         driver.get("https://elearning.aua.am/");
 
         WebElement spanElement = driver.findElement(By.className("login"));
@@ -70,10 +67,12 @@ public class TestClass {
         aElement.click();
 
         WebElement username = driver.findElement(By.id("username"));
-        username.sendKeys(yourValidUserName);
+        //enter valid username
+        username.sendKeys("");
 
         WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys(yourValidPassword);
+        //enter valid password
+        password.sendKeys("");
 
         WebElement logBTN = driver.findElement(By.id("loginbtn"));
         logBTN.click();
